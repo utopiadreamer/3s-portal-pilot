@@ -3,15 +3,19 @@ import React from 'react';
 import SideNav from './sidenav';
 import '../../app/ui/global.css';
 import { inter } from '../ui/fonts';
-import { i18n } from 'next-i18next';
+import { useSelector } from 'react-redux';
+import { IGlobalState } from '../redux/store';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const reduxLanguage = useSelector(
+    (state: IGlobalState) => state.reduxlanguage.language,
+  );
+
   return (
-    <html dir={i18n?.language.startsWith('ar') ? 'rtl' : 'rtl'} lang={i18n?.language}>
+    <html dir={reduxLanguage.isRtl ? 'rtl' : 'rtl'} lang={reduxLanguage.lang}>
       <body className={`${inter.className} antialiased`}>
         <div className="flex h-screen flex-col md:flex-row">
-          <div className="flex-grow md:overflow-y-auto"></div>
-          <div className="flex h-screen flex-col md:flex-row">            
+          <div className="flex h-screen flex-col md:flex-row">
             <div className="w-full flex-none md:w-64">
               <SideNav />
             </div>

@@ -1,12 +1,14 @@
 'use client';
 
+import i18n from '@/i18n';
 import { useTranslation } from 'next-i18next';
+import { ChangeLanguage } from '../redux/language/actions';
 
 const LanguageSelector = () => {
-  const { i18n, t } = useTranslation('common');
+  const { t } = useTranslation('common');
 
   const changeLanguage = (lng: any) => {
-    i18n.changeLanguage(lng);
+    ChangeLanguage(lng);
   };
 
   return (

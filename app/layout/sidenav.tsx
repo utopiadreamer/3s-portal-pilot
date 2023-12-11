@@ -1,8 +1,7 @@
 'use client';
 import Image from 'next/image';
-import { LanguageSelector } from '@3s/components';
 import Link from 'next/link';
-// import LanguageSelector from './language-selector';
+import LanguageSelector from './language-selector';
 import NavLinks from './nav-links';
 
 export default function SideNav() {

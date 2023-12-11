@@ -1,12 +1,12 @@
 'use client';
 
 import { configureStore} from '@reduxjs/toolkit';
+import reducers from './reducers';
 //"Ducks" pattern or feature-based structure.
 // Store
 
   const store = configureStore({
-    reducer: {
-    },
+    reducer: reducers,
   });
 
   export type RootState = ReturnType<typeof store.getState>;

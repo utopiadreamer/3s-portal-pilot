@@ -8,7 +8,7 @@
     "start": "next start -p 3008"
   },
   "dependencies": {
-    "@3s/components": "^1.0.7",
+    "@3s/components": "^1.1.6",
     "@fluentui/react": "^8.112.9",
     "@heroicons/react": "^2.0.18",
     "@reduxjs/toolkit": "^2.0.1",
