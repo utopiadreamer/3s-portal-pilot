@@ -1,0 +1,32 @@
+.container {
+  padding: 30px;
+
+  .line {
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+
+    .box {
+        border: 1px solid;
+        padding: 10px;
+        box-shadow: 4px 4px 4px 2px grey;
+    }
+  }
+
+  .blocked {
+    max-width: 250px;
+  }
+}
+
+.sampleDialog {
+  .ms-Dialog-actions {
+    display: block !important;
+
+    .footerBtns {
+        justify-content: flex-end;
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
