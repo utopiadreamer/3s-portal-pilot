@@ -5,11 +5,13 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import MenuItems from "../shared/constants/menu";
 import { Icon, initializeIcons } from "@fluentui/react";
+// import { useTranslation } from "react-i18next";
 
 initializeIcons();
 
 export default function NavLinks() {
   const pathname = usePathname();
+  // const { t } = useTranslation('menu');
   return (
     <>
       {MenuItems.map((link) => {
