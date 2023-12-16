@@ -22,6 +22,12 @@ const MenuItems: LayoutMenuItem[] = [
         href: '/pages/grid-list'
     },
     {
+        id: 'style',
+        title: 'style',
+        icon: 'Home',
+        href: '/pages/styles-feature'
+    },
+    {
         id: 'validation',
         title: 'menu.ManageProfiles',
         icon: 'News',
