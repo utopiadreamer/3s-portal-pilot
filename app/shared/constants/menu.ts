@@ -23,9 +23,9 @@ const MenuItems: LayoutMenuItem[] = [
     },
     {
         id: 'validation',
-        title: 'menu.ManageProfiles',
+        title: 'validation',
         icon: 'News',
-        href: '',
+        href: '/pages/validation-form',
         subItems: [
             {
                 id: 'SearchCoreTaxpayer',

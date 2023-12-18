@@ -4,14 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import MenuItems from "../shared/constants/menu";
-import { Icon, initializeIcons } from "@fluentui/react";
+import { Icon } from "@fluentui/react";
+import { useTranslation } from "react-i18next";
 // import { useTranslation } from "react-i18next";
 
-initializeIcons();
 
 export default function NavLinks() {
   const pathname = usePathname();
-  // const { t } = useTranslation('menu');
+  const { t } = useTranslation('menu');
   return (
     <>
       {MenuItems.map((link) => {
@@ -27,7 +27,7 @@ export default function NavLinks() {
             )}
           >
             <Icon iconName={link.icon} />
-            <p className="hidden md:block">{link.title}</p>
+            <div className="hidden md:block">{t(link.title)}</div>
           </Link>
         );
       })}

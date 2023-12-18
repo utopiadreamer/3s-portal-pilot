@@ -1,12 +1,11 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-
-import Backend from 'i18next-xhr-backend';
+import ChainedBackend from "i18next-chained-backend";
+import resourcesToBackend from "i18next-resources-to-backend";
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-
 i18n
-  // .use(Backend)
+  .use(ChainedBackend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
@@ -15,6 +14,11 @@ i18n
     ns: ['common', 'home', 'menu', 'controls-form'],
     interpolation: {
       escapeValue: false,
+    },
+    backend: {
+      backends: [
+        resourcesToBackend((lng, ns) => import(`./public/locales/${lng}/${ns}.json`))
+      ]
     }
   });
 export default i18n;

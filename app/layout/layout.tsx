@@ -1,28 +1,34 @@
-'use client';
 import React from 'react';
 import SideNav from './sidenav';
 import '../../app/ui/global.css';
 import { inter } from '../ui/fonts';
-import { useSelector } from 'react-redux';
-import { IGlobalState } from '../redux/store';
+import Header from './header';
+import { initializeIcons } from '@fluentui/react';
 
+initializeIcons();
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const reduxLanguage = useSelector(
-    (state: IGlobalState) => state.reduxlanguage.language,
-  );
+  // const init = () => {
+  //   if (isNullOrUndefined(reduxLanguage.lang)) {
+  //       let lang = i18n.language;
+  //       if (isNullOrUndefined(lang)) lang = LanguageUtil.GetStorageLang();
+  //       dispatch(changeLanguage(lang));
+  //   }
+  // };
+
+  // init();
 
   return (
-    <html dir={reduxLanguage.isRtl ? 'rtl' : 'rtl'} lang={reduxLanguage.lang}>
-      <body className={`${inter.className} antialiased`}>
-        <div className="flex h-screen flex-col md:flex-row">
-          <div className="flex h-screen flex-col md:flex-row">
-            <div className="w-full flex-none md:w-64">
-              <SideNav />
-            </div>
-            <main className="my-0 py-16">{children}</main>
-          </div>
+    <div className="flex h-screen flex-col md:flex-row">
+      <div className="flex h-screen flex-col md:flex-row">
+        <div className="w-full flex-none md:w-64">
+          <SideNav />
         </div>
-      </body>
-    </html>
+        <main className="my-0 py-16">
+          <Header />
+          <br />
+          {children}
+        </main>
+      </div>
+    </div>
   );
 }
