@@ -17,9 +17,39 @@ const MenuItems: LayoutMenuItem[] = [
     },
     {
         id: 'grid',
-        title: 'grid',
+        title: 'User List',
         icon: 'Home',
-        href: '/pages/grid-list'
+        href: '/pages/users-list'
+    },
+    {
+        id: 'dates',
+        title: 'dates',
+        icon: 'Home',
+        href: '/pages/dates-form'
+    },
+    {
+        id: 'users',
+        title: 'users with server',
+        icon: 'Home',
+        href: '/users/server'
+    },
+    {
+        id: 'usersClient',
+        title: 'users with client',
+        icon: 'Home',
+        href: '/users/client'
+    },
+    {
+        id: 'api',
+        title: 'api',
+        icon: 'Home',
+        href: '/pages/call-api'
+    },
+    {
+        id: 'dashboard',
+        title: 'dashboard',
+        icon: 'Home',
+        href: '/dashboard'
     },
     {
         id: 'validation',

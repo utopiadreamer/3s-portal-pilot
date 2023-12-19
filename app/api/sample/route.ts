@@ -15,18 +15,14 @@ export default async function sample(
     })
   }
   try {
-    const result = await fetch("https://localhost:44307/codes", {
-      method: "GET",
-      headers: {
-        Authorization: "Bearer " + token?.access_token,
-      },
-    })
-    var vv = await result.json()
+    const result = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
     // return res.status(200).json({
     //     status: 'Ok',
     //     data: await result.json()
     // })
-    res.send(JSON.stringify(vv, null, 2))
+    res.send(JSON.stringify(result, null, 2))
   } catch (e: any) {
     return res.status(400).json({
       statusss: e.message,

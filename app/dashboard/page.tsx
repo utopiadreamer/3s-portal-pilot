@@ -1,8 +1,8 @@
+'use client';
 
 import React from 'react';
 
 export default function Page() {
-  return <div>Grid list Page
-  </div>;
+  return <div>Dashboard</div>;
 }
 

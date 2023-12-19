@@ -2,6 +2,7 @@
 
 import i18n from '@/i18n';
 import { useTranslation } from 'next-i18next';
+import { useEffect } from 'react';
 import { ChangeLanguage } from '../redux/language/actions';
 
 const LanguageSelector = () => {

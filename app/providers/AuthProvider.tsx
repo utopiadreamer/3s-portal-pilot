@@ -25,9 +25,9 @@ function Auth({ children }) {
 
   // return <Unauthorized />
   
-  // if (status !== 'loading') {
-  //   signIn('identity-server');
-  // }
+  if (status !== 'loading') {
+    signIn('identity-server');
+  }
 
   return <>{children}</>;
 }

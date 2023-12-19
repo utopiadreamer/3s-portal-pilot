@@ -4,7 +4,7 @@ import IdentityServer4Provider from "next-auth/providers/identity-server4"
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
 var configration =process.env;
-export default NextAuth({
+const handler = NextAuth({
   // https://next-auth.js.org/configuration/providers
   providers: [
     IdentityServer4Provider({
@@ -134,3 +134,4 @@ export default NextAuth({
   // Enable debug messages in the console if you are having problems
   debug: true,
 })
+export { handler as GET, handler as POST };

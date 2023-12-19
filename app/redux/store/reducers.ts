@@ -1,4 +1,4 @@
-import { getLibraryReducers } from '@3s/components';
+import { getLibraryReducers } from '@pilot/components';
 import { combineReducers } from 'redux';
 import { languageReducer } from '../language/reducer';
 

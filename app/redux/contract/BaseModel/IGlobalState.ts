@@ -1,4 +1,4 @@
-import { ComponentReduxState } from '@3s/components';
+import { ComponentReduxState } from '@pilot/components';
 
 export interface IGlobalState extends ComponentReduxState {
 }

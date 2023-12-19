@@ -1,6 +1,6 @@
 'use client';
 
-import { Form, TextField, ValidationType } from '@3s/components';
+import { Form, TextField, ValidationType } from '@pilot/components';
 import { PrimaryButton } from '@fluentui/react';
 import React, { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
